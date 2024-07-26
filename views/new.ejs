@@ -1,0 +1,119 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+  <!-- <form method="post" action="/listings">
+      <input name="listing[title]" placeholder="enter title" type="text" />
+      <br /><br />
+      <textarea
+        name="listing[description]"
+        placeholder="enter description"
+      ></textarea>
+      <br /><br />
+      <input
+        name="listing[image]"
+        placeholder="enter image URL/Link"
+        type="text"
+      />
+      <br /><br />
+      <input name="listing[price]" placeholder="enter price" type="number" />
+      <br /><br />
+      <input name="listing[country]" placeholder="enter country" type="text" />
+      <br /><br />
+      <input
+        name="listing[location]"
+        placeholder="enter location"
+        type="text"
+      />
+      <br /><br />
+      <button>Add</button>
+    </form> -->
+
+  <div class="row">
+    <div class="col-8 offset-2">
+      <h2>Create a new Listing</h2>
+      <form
+        method="post"
+        action="/listings"
+        novalidate
+        class="needs-validation"
+        enctype="multipart/form-data"
+      >
+        <div class="mb-3">
+          <label for="title" class="form-lable">Title</label>
+          <input
+            name="listing[title]"
+            placeholder="enter title"
+            type="text"
+            class="form-control"
+            required
+          />
+          <div class="valid-feedback">title Looks good!</div>
+          <div class="invalid-feedback">title should be required</div>
+        </div>
+
+        <div>
+          <label for="description" class="form-lable"> Description</label>
+          <textarea
+            name="listing[description]"
+            class="form-control"
+            required
+          ></textarea>
+          <div class="valid-feedback">Description Looks good!</div>
+          <div class="invalid-feedback">Description should be required</div>
+        </div>
+
+        <div>
+          <label for=" image" class="form-lable">upload Image </label>
+          <input name="listing[image]" type="text" class="form-control" />
+        </div>
+
+        <div class="row">
+          <div class="mb-3 col-md-4">
+            <label for=" price" class="form-lable"> Price</label>
+            <input
+              name="listing[price]"
+              placeholder="1200"
+              class="form-control"
+              required
+            />
+            <div class="valid-feedback">Price Looks good!</div>
+            <div class="invalid-feedback">
+              Price should be valid or required
+            </div>
+          </div>
+
+          <div class="mb-3 col-md-8">
+            <label for=" country" class="form-lable">country</label>
+            <input
+              name="listing[country]"
+              placeholder="india"
+              type="text"
+              class="form-control"
+              required
+            />
+            <div class="valid-feedback">country Looks good!</div>
+            <div class="invalid-feedback">country name should be required</div>
+          </div>
+        </div>
+
+        <div>
+          <label for=" location" class="form-lable">location</label>
+          <input
+            name="listing[location]"
+            placeholder="jaipur, rajasthan"
+            type="text"
+            class="form-control"
+            required
+          />
+          <div class="valid-feedback">location Looks good!</div>
+          <div class="invalid-feedback">location name should be required</div>
+        </div>
+        <br />
+        <br />
+
+        <button class="btn btn-dark btn-new">Add</button>
+      </form>
+      <br />
+      <br />
+    </div>
+  </div>
+</body>

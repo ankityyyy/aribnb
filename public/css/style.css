@@ -1,0 +1,101 @@
+.navbar{
+  height: 5rem;
+  background-color: #fff;
+}
+
+.fa-regular{
+  color: #fe424d;
+  font-size: 2rem;
+}
+.nav-link{
+  color: #222222 !important;
+}
+
+
+/*footer*/
+
+.f-info-links a{
+  text-decoration: none;
+  color: #222222;
+  }
+  
+  .f-info-links a:hover{
+      text-decoration: underline;
+  }
+  
+  .f-info{
+      height: 8rem;
+      background-color: #ebebeb;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items:space-evenly; ;
+  }
+  
+  .f-info-links,
+  .f-info-socials{
+      width: 100%;
+  }
+  
+  .f-info-socials i{
+      font-size: 1.2rem;
+      margin-right: 1rem;
+  }
+  
+  .f-info{
+      text-align: center;
+      height: 8rem;
+      background-color: #ebebeb;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: space-evenly;
+  }
+
+/*card*/
+  .listing-card{
+      border: none !important;
+      margin-bottom: 2rem;
+  }
+
+  .card-body{
+      padding: 0 !important;
+  }
+
+  .card-text{
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: 400 !important;
+  }
+
+  .a-link{
+      text-decoration: none;
+  }
+  /* .card-img-overlay{
+    opacity: 0;
+  } */
+
+  .card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: #fff;
+  }
+
+  .border{
+    border-radius: 1rem ;
+  }
+
+  .edit-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+.btn-new{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+.Show-img{
+  height: 30vh;    }
+
+  .btn1{
+      display: flex;
+  }
