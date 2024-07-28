@@ -1,32 +1,5 @@
 <% layout("/layouts/boilerplate") %>
 <body>
-  <!-- <form method="post" action="/listings">
-      <input name="listing[title]" placeholder="enter title" type="text" />
-      <br /><br />
-      <textarea
-        name="listing[description]"
-        placeholder="enter description"
-      ></textarea>
-      <br /><br />
-      <input
-        name="listing[image]"
-        placeholder="enter image URL/Link"
-        type="text"
-      />
-      <br /><br />
-      <input name="listing[price]" placeholder="enter price" type="number" />
-      <br /><br />
-      <input name="listing[country]" placeholder="enter country" type="text" />
-      <br /><br />
-      <input
-        name="listing[location]"
-        placeholder="enter location"
-        type="text"
-      />
-      <br /><br />
-      <button>Add</button>
-    </form> -->
-
   <div class="row">
     <div class="col-8 offset-2">
       <h2>Create a new Listing</h2>
@@ -35,7 +8,6 @@
         action="/listings"
         novalidate
         class="needs-validation"
-        enctype="multipart/form-data"
       >
         <div class="mb-3">
           <label for="title" class="form-lable">Title</label>

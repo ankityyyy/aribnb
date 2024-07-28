@@ -52,7 +52,7 @@
       align-items: space-evenly;
   }
 
-/*card*/
+
   .listing-card{
       border: none !important;
       margin-bottom: 2rem;
@@ -70,32 +70,27 @@
   .a-link{
       text-decoration: none;
   }
-  /* .card-img-overlay{
-    opacity: 0;
-  } */
-
-  .card-img-overlay:hover{
-    opacity: 0.2;
-    background-color: #fff;
-  }
-
-  .border{
-    border-radius: 1rem ;
-  }
 
   .edit-btn{
-    background-color: #fe424d !important;
-    border: none !important;
-}
-
-.btn-new{
-    background-color: #fe424d !important;
-    border: none !important;
-}
-
-.Show-img{
-  height: 30vh;    }
-
-  .btn1{
-      display: flex;
+      background-color: #fe424d !important;
+      border: none !important;
   }
+
+  .btn-new{
+      background-color: #fe424d !important;
+      border: none !important;
+  }
+
+  .Show-img{
+      height: 30vh;    }
+
+      .btn1{
+          display: flex;
+      }
+
+      /*map*/
+      #map { 
+          height: 400px;
+          width: 80vh;
+
+       }
