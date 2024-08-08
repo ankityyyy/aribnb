@@ -15,6 +15,16 @@
         <a class="nav-link" href="/listings">All Listings</a>
         <a class="nav-link" href="/listings/new">Add new Listing</a>
       </div>
+
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link" href="/listings/new">Airbnb your home</a>
+        <% if(!CurrUser) {%>
+        <a class="nav-link active" href="/signup"> <b>signUp</b> </a>
+        <a class="nav-link" href="/login"><b>login</b></a>
+        <% } %> <% if(CurrUser) {%>
+        <a class="nav-link" href="/logout">logout</a>
+        <% } %>
+      </div>
     </div>
   </div>
 </nav>

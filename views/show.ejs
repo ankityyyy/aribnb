@@ -1,26 +1,4 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h3>Listing Details :</h3>
-    <ul>
-      <li><%= listing.title %></li>
-      <li><%= listing.description %></li>
-      <li>&#8377; <%= listing.price.toLocaleString("en-IN") %></li>
-      <li><%= listing.location %></li>
-      <li><%= listing.country %></li>
-    </ul>
-    <a href="/listings/<%= listing._id %>/edit">Edit</a>
-    <br /><br />
-    <form method="POST" action="/listings/<%=listing._id%>?_method=DELETE">
-      <button>Delete this listing</button>
-    </form>
-  </body>
-</html> -->
+
 
 <% layout("/layouts/boilerplate") %>
 
@@ -35,6 +13,8 @@
       class="card-img-top Show-img"
       alt="listing-image"
     />
+
+    <p class="card-text"><i>owned by <%= listing?.owner?.username %></i></p>
 
     <p><%= listing.description %></p>
 
@@ -62,8 +42,8 @@
     <button>Delete</button>
   </form>
 </div>
-<br /><br />
-<!-- 
+<br><br>
+
 <div class="col-6 offset-2 mb-3">
   <h4>Leave a Review</h4>
   <form
@@ -118,4 +98,22 @@
   <hr />
 
   <p><b>All Reviews</b></p>
-</div> -->
+  <div>
+    <% for(review of listing.reviews){ %>
+    
+    <div>
+      <p class="starability-result" data-rating="<%= review.rating %>"></p>
+      <p><b> <%= review.comment %> </b></p>
+      <form
+        action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE"
+        method="post"
+      >
+        <button class="btn btn-dark">Delete</button>
+      </form>
+      <hr />
+    </div>
+    <% } %>
+  </div>
+</div>
+  </div>
+</div>

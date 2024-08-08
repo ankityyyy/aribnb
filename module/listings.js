@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
-const Review = require("../module/reviews.js");
+const Review = require("../module/reviews.js"); // Ensure the path is correct
 
-const listingSchema = mongoose.Schema({
+const listingSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
@@ -21,10 +21,20 @@ const listingSchema = mongoose.Schema({
   country: String,
   reviews: [
     {
-      type: Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: "Review",
     },
   ],
+  owner: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+  },
+});
+
+listingSchema.post("findOneAndDelete", async (listing) => {
+  if (listing) {
+    await Review.deleteMany({ _id: { $in: listing.reviews } });
+  }
 });
 
 const Listing = mongoose.model("Listing", listingSchema);
